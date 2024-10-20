@@ -1,4 +1,5 @@
 def total_salary(path):
+    # The function calculate total and avarage salary from file
     total = 0
     medium = 0
     dev_count = 0
@@ -21,8 +22,7 @@ def total_salary(path):
         print("Файл не знайдено. Перевірте, чи вказано правильне ім'я файлу.")
     except IOError:
         print(
-            "Сталася помилка під час читання файлу. Можливо, файл пошкоджений або немає доступу."
-        )
+            "Сталася помилка під час читання файлу. Можливо, файл пошкоджений або немає доступу.")
 
 
 total, medium = total_salary("text1.txt")
