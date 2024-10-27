@@ -1,3 +1,5 @@
+from prettytable import PrettyTable
+
 def add_contact(args, contacts):
     '''User adding'''
     name, phone_number = args
@@ -19,3 +21,11 @@ def show_phone(args, contacts):
         phone_number = contacts[name]
         return f"Your phone number is: {phone_number}"
     else: return f"User not found"
+
+def show_all_contacts(contacts):
+    '''Display information about all users'''
+    table = PrettyTable()
+    table.field_names = ["Name", "Phone Number"]
+    for name, phone_number in contacts.items():
+        table.add_row([name, phone_number])
+    print(f"All users information:\n{table}")
